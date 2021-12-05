@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-//    public void changeCost(Long productId, Integer delta);
 
-    List<Product> findByCostBetween(Integer min, Integer max);
+    List<Product> findProductByCostBetween(String min, String max);
 }

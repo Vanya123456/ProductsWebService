@@ -31,17 +31,12 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public Product createProduct(Product product){
+    public Product createProduct(@RequestBody Product product){
         return productService.save(product);
     }
 
-//    @GetMapping("/products/change_cost")
-//    public void changeCost(@RequestParam Long productId, @RequestParam Integer delta) {
-//        productService.changePrice(productId, delta);
-//    }
-
     @GetMapping("/products/price_between")
-    public List<Product> findProductsByPriceBetween(@RequestParam(defaultValue = "0") Integer min, @RequestParam(defaultValue = "100") Integer max) {
+    public List<Product> findProductsByPriceBetween(@RequestParam(defaultValue = "0") String min, @RequestParam(defaultValue = "5") String max) {
         return productService.findByPriceBetween(min, max);
     }
 

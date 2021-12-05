@@ -15,19 +15,5 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
                 $scope.loadProducts();
             });
     }
-
-    // $scope.changeScore = function (studentId, delta) {
-    //     $http({
-    //         url: contextPath + '/students/change_score',
-    //         method: 'GET',
-    //         params: {
-    //             studentId: studentId,
-    //             delta: delta
-    //         }
-    //     }).then(function (response) {
-    //         $scope.loadStudents();
-    //     });
-    // }
-
     $scope.loadProducts();
 });

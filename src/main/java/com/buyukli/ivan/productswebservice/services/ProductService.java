@@ -31,15 +31,7 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    public void delete(Product product){
-        productRepository.delete(product);
-    }
-
-//    public void changePrice(Long productId, Integer delta) {
-//        productRepository.changeCost(productId, delta);
-//    }
-
-    public List<Product> findByPriceBetween(Integer min, Integer max) {
-        return productRepository.findByCostBetween(min, max);
+    public List<Product> findByPriceBetween(String min, String max) {
+        return productRepository.findProductByCostBetween(min, max);
     }
 }
